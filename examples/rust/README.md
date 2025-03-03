@@ -16,24 +16,21 @@ new message: SubscribeUpdate { filters: ["client"], update_oneof: Some(Account(S
 
 ### subscribe to account updates
 ```shell
-cargo run --bin client -- -e "https://api.rpcpool.com" \
-  --x-token "<token>" \
+cargo run --bin client -- -e "https://solana-yellowstone-grpc.publicnode.com:443" \
   subscribe \
-  --accounts --accounts-account "<Pubkey>"
+  --accounts --accounts-account "SysvarC1ock11111111111111111111111111111111"
 ```
 
 ### subscribe to slot updates
 ```shell
-cargo run --bin client -- -e "https://api.rpcpool.com" \
-  --x-token "<token>" \
+cargo run --bin client -- -e "https://solana-yellowstone-grpc.publicnode.com:443" \
   subscribe \
   --slots
 ```
 
 ### subscribe to slot updates, commitment processed
 ```shell
-cargo run --bin client -- -e "https://api.rpcpool.com" \
-  --x-token "<token>" \
+cargo run --bin client -- -e "https://solana-yellowstone-grpc.publicnode.com:443" \
   --commitment processed \
   subscribe \
   --slots
@@ -41,8 +38,7 @@ cargo run --bin client -- -e "https://api.rpcpool.com" \
 
 ### subscribe to transaction updates
 ```shell
-cargo run --bin client -- -e "https://api.rpcpool.com" \
-  --x-token "<token>" \
+cargo run --bin client -- -e "https://solana-yellowstone-grpc.publicnode.com:443" \
   subscribe \
   --transactions \
   --transactions-vote false \
@@ -52,8 +48,7 @@ cargo run --bin client -- -e "https://api.rpcpool.com" \
 
 ### unary Ping
 ```shell
-cargo run --bin client -- -e "https://api.rpcpool.com" \
-  --x-token "<token>" \
+cargo run --bin client -- -e "https://solana-yellowstone-grpc.publicnode.com:443" \
   ping
 ```
 ```text
@@ -62,7 +57,7 @@ response: PongResponse { count: 1 }
 
 ### unary GetLatestBlockhash
 ```shell
-cargo run --bin client -- -e "https://api.rpcpool.com" \
+cargo run --bin client -- -e "https://solana-yellowstone-grpc.publicnode.com:443" \
   --x-token "<token>" \
   get-latest-blockhash
 ```
